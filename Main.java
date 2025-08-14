@@ -6,7 +6,8 @@ public class Main {
 
 
 Scanner scanner = new Scanner(System.in);
-double balance; boolean isRunning = true;
+double balance = 0;
+ boolean isRunning = true;
 int choice;
 
 while(isRunning){
@@ -33,7 +34,6 @@ choice = scanner.nextInt();
 
 }
 
-// showBalance()
 
 // deposit()
 
@@ -44,5 +44,10 @@ choice = scanner.nextInt();
 // EXIT MESSAGE
 
 scanner.close();
+        }
+
+        static void showBalance(double balance){ 
+                System.out.printf("$%f, balance");
+
         }
 }
