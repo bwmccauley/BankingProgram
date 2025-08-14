@@ -9,7 +9,8 @@ Scanner scanner = new Scanner(System.in);
 double balance; boolean isRunning = true;
 int choice;
 
-System.out.println("*********");
+while(isRunning){
+        System.out.println("*********");
 System.out.println("BANKING PROGRAM");
 System.out.println("*********");
 System.out.println("1. Show Balance");
@@ -30,6 +31,7 @@ choice = scanner.nextInt();
         }
 
 
+}
 
 // showBalance()
 
