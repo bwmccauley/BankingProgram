@@ -25,7 +25,7 @@ choice = scanner.nextInt();
         switch(choice){
                 case 1 -> showBalance(balance);
                 case 2 -> balance += deposit();
-                case 3 -> System.out.println("WITHDRAW");
+                case 3 -> balance -= withdraw(balance);
                 case 4 -> isRunning = false;
                 default -> System.out.println("INVALID CHOICE");
         }
@@ -34,13 +34,14 @@ choice = scanner.nextInt();
 }
 
 
-// deposit()
 
 
-// withdraw()
+            System.out.println("************************");
+        System.out.println("Thank you! Have a nice day!");
+            System.out.println("************************");
 
 
-// EXIT MESSAGE
+
 
 scanner.close();
         }
@@ -64,6 +65,27 @@ scanner.close();
             else{
                 return amount;
             }
+
+        }
+        static double withdraw(double balance){
+
+
+                System.out.print("Enter amount to withdraw: ");
+               double amount = scanner.nextDouble();
+
+                if (amount <= 0){
+                    System.out.println("AMOUNT MUST BE POSITIVE");
+                    return 0.0;
+
+                }
+                else if(amount > balance){
+                    System.out.println("INSUFFICIENT FUNDS");
+                    return 0.0;
+
+                }
+                else{
+                    return amount;
+                }
 
         }
 }
