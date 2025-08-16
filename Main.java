@@ -6,7 +6,7 @@ public class Main {
 
 
 Scanner scanner = new Scanner(System.in);
-double balance = 0;
+double balance = 10.99;
  boolean isRunning = true;
 int choice;
 
@@ -24,7 +24,7 @@ System.out.println("Enter your choice (1-4): ");
 choice = scanner.nextInt();
 
         switch(choice){
-                case 1 -> System.out.println("SHOW BALANCE");
+                case 1 -> System.out.println(balance);
                 case 2 -> System.out.println("DEPOSIT");
                 case 3 -> System.out.println("WITHDRAW");
                 case 4 -> isRunning = false;
@@ -38,7 +38,7 @@ choice = scanner.nextInt();
 // deposit()
 
 
-// withdrawl()
+// withdraw()
 
 
 // EXIT MESSAGE
@@ -46,8 +46,9 @@ choice = scanner.nextInt();
 scanner.close();
         }
 
-        static void showBalance(double balance){ 
-                System.out.printf("$%f, balance");
+        static void showBalance(double balance){
+                System.out.println("*********");
+                System.out.printf("$%.2f\n, balance");
 
         }
 }
